@@ -35,7 +35,8 @@ You can install "pytest-checkipdb" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-:: py.test --cipdb
+    py.test --cipdb
+
 
 Contributing
 ------------
