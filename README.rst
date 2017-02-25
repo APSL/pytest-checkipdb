@@ -5,10 +5,6 @@ pytest-checkipdb
     :target: https://travis-ci.org/avallbona/pytest-checkipdb
     :alt: See Build Status on Travis CI
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/avallbona/pytest-checkipdb?branch=master
-    :target: https://ci.appveyor.com/project/avallbona/pytest-checkipdb/branch/master
-    :alt: See Build Status on AppVeyor
-
 Plugin to check if there are ipdb breakpoints left
 
 ----
@@ -39,7 +35,7 @@ You can install "pytest-checkipdb" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-    py.test --cipdb
+:: py.test --cipdb
 
 Contributing
 ------------
