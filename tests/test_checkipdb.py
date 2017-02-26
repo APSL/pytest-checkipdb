@@ -62,3 +62,4 @@
 #
 #     # make sure that that we get a '0' exit code for the testsuite
 #     assert result.ret == 0
+#
