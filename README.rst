@@ -27,6 +27,14 @@ Usage
     $ py.test --cipdb
 
 
+TODO
+----
+
+- Tests
+- Tox
+- Documentation
+- Control when the strings to check are commented. Perhaps with a regex?
+
 Contributing
 ------------
 Contributions are very welcome. Tests can be run with `tox`_, please ensure

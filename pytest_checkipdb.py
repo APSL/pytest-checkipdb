@@ -2,7 +2,7 @@
 
 import pytest
 
-to_check = [
+TO_CHECK = [
     'import ipdb; ipdb.set_trace()',
     'import ipdb',
     'ipdb.set_trace()',
@@ -34,7 +34,7 @@ class CheckIpdbItem(pytest.Item, pytest.File):
         self.raw_content = self.fspath.open().read()
 
     def runtest(self):
-        for item in to_check:
+        for item in TO_CHECK:
             if item in self.raw_content:
                 raise CheckIpdbError('Detected: "{}" in "{}"'.format(item, self.fspath))
 
