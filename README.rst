@@ -12,18 +12,6 @@ Plugin to check if there are ipdb breakpoints left
 This `Pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `Cookiecutter-pytest-plugin`_ template.
 
 
-Features
---------
-
-* TODO
-
-
-Requirements
-------------
-
-* TODO
-
-
 Installation
 ------------
 
