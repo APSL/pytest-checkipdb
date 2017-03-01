@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-pytest_plugins = "pytester",
+pytest_plugins = "pytester"
 
 
 class TestBasic(object):
@@ -10,7 +10,7 @@ class TestBasic(object):
             def test_ok():
                 pass
         """)
-        result = testdir.runpytest()
+        result = testdir.runpytest("--cipdb", )
         result.stdout.fnmatch_lines('test_ok.py .')
 
     def test_ko(self, testdir):
@@ -25,7 +25,7 @@ class TestBasic(object):
                 ipdb.set_trace()
                 pass
         """)
-        result = testdir.runpytest()
+        result = testdir.runpytest("--cipdb", )
         result.stdout.fnmatch_lines('test_ko.py .')
 
 

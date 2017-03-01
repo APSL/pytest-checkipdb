@@ -22,7 +22,9 @@ setup(
     url='https://github.com/avallbona/pytest-checkipdb',
     description='plugin to check if there are ipdb debugs left',
     long_description=read('README.rst'),
-    py_modules=['pytest_checkipdb'],
+    py_modules=[
+        'pytest_checkipdb'
+    ],
     install_requires=[
         'pytest>=2.9.2',
         'ipdb>=0.10.2'
