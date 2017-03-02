@@ -5,6 +5,10 @@ pytest-checkipdb
     :target: https://travis-ci.org/avallbona/pytest-checkipdb
     :alt: See Build Status on Travis CI
 
+.. image:: https://ci.appveyor.com/api/projects/status/github/avallbona/pytest-checkipdb?branch=master
+    :target: https://ci.appveyor.com/project/avallbona/pytest-checkipdb/branch/master
+    :alt: See Build Status on AppVeyor
+
 .. image:: https://img.shields.io/badge/version-0.1.2-yellow.svg?style=flat-square
     :target: setup.py
     :alt: Version 0.1.2
