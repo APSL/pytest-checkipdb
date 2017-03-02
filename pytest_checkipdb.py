@@ -32,6 +32,7 @@ class CheckIpdbItem(pytest.Item, pytest.File):
     def __init__(self, path, parent):
         super(CheckIpdbItem, self).__init__(path, parent=parent)
         self.raw_content = self.fspath.open().read()
+        # self.add_marker("cpidb")
 
     def runtest(self):
         for item in TO_CHECK:
