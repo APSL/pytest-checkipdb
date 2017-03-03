@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-
-TO_CHECK = [
-    'import ipdb; ipdb.set_trace()',
-    'import ipdb',
-    'ipdb.set_trace()',
-    'ipdb.'
-]
+import ast
 
 
 def pytest_addoption(parser):
@@ -32,18 +26,26 @@ class CheckIpdbItem(pytest.Item, pytest.File):
     def __init__(self, path, parent):
         super(CheckIpdbItem, self).__init__(path, parent=parent)
         self.raw_content = self.fspath.open().read()
-        # self.add_marker("cpidb")
 
     def runtest(self):
-        for item in TO_CHECK:
-            if item in self.raw_content:
-                raise CheckIpdbError('Detected: "{}" in "{}"'.format(item, self.fspath))
+        t = ast.parse(self.raw_content)
+        Visitor().visit(t)
 
     def repr_failure(self, excinfo):
         if excinfo.errisinstance(CheckIpdbError):
-            return excinfo.value.args[0]
+            return '{} in file {}'.format(excinfo.value.args[0], self.fspath)
         return super(CheckIpdbItem, self).repr_failure(excinfo)
 
 
 class CheckIpdbError(Exception):
     """ indicates an error during cipdb checks. """
+
+
+class Visitor(ast.NodeVisitor):
+
+    def visit_Call(self, node):
+        if node.func.value.id == 'ipdb':
+            line_number = node.func.value.lineno
+            col_number = node.func.value.col_offset
+            raise CheckIpdbError('Detected ipdb call at line {} col {}'.format(line_number, col_number))
+        ast.NodeVisitor.generic_visit(self, node)

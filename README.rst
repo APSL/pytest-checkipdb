@@ -9,9 +9,9 @@ pytest-checkipdb
     :target: https://ci.appveyor.com/project/avallbona/pytest-checkipdb/branch/master
     :alt: See Build Status on AppVeyor
 
-.. image:: https://img.shields.io/badge/version-0.1.2-yellow.svg?style=flat-square
+.. image:: https://img.shields.io/badge/version-0.2.0-yellow.svg?style=flat-square
     :target: setup.py
-    :alt: Version 0.1.2
+    :alt: Version 0.2.0
 
 Plugin to check if there are ipdb breakpoints left
 
@@ -34,14 +34,6 @@ Usage
 
     $ py.test --cipdb
 
-
-TODO
-----
-
-- Tests
-- Tox
-- Documentation
-- Control when the strings to check are commented. Perhaps with a regex?
 
 Contributing
 ------------
