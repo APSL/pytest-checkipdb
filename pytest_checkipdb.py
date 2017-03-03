@@ -44,8 +44,11 @@ class CheckIpdbError(Exception):
 class Visitor(ast.NodeVisitor):
 
     def visit_Call(self, node):
-        if node.func.value.id == 'ipdb':
-            line_number = node.func.value.lineno
-            col_number = node.func.value.col_offset
-            raise CheckIpdbError('Detected ipdb call at line {} col {}'.format(line_number, col_number))
+        try:
+            if node.func.value.id == 'ipdb':
+                line_number = node.func.value.lineno
+                col_number = node.func.value.col_offset
+                raise CheckIpdbError('Detected ipdb call at line {} col {}'.format(line_number, col_number))
+        except AttributeError:
+            pass
         ast.NodeVisitor.generic_visit(self, node)
