@@ -5,15 +5,11 @@ pytest-checkipdb
     :target: https://travis-ci.org/avallbona/pytest-checkipdb
     :alt: See Build Status on Travis CI
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/avallbona/pytest-checkipdb?branch=master
-    :target: https://ci.appveyor.com/project/avallbona/pytest-checkipdb/branch/master
-    :alt: See Build Status on AppVeyor
-
-.. image:: https://img.shields.io/badge/version-0.2.1-yellow.svg?style=flat-square
+.. image:: https://img.shields.io/badge/version-0.3.1-yellow.svg?style=flat-square
     :target: setup.py
-    :alt: Version 0.2.1
+    :alt: Version 0.3.1
 
-Plugin to check if there are ipdb breakpoints left
+Plugin to check if there are ipdb/pdb breakpoints left into our code
 
 ----
 
@@ -32,11 +28,12 @@ Usage
 -----
 ::
 
-    $ py.test --cipdb
+    $ pytest --cipdb
 
 
 Contributing
 ------------
+
 Contributions are very welcome. Tests can be run with `tox`_, please ensure
 the coverage at least stays the same before you submit a pull request.
 
