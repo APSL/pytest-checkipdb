@@ -1,13 +1,16 @@
 pytest-checkipdb
 ===================================
 
+.. image:: https://img.shields.io/pypi/v/pytest-checkipdb.svg
+    :target: https://pypi.python.org/pypi/pytest-checkipdb/
+
 .. image:: https://travis-ci.org/APSL/pytest-checkipdb.svg?branch=master
     :target: https://travis-ci.org/APSL/pytest-checkipdb
     :alt: See Build Status on Travis CI
 
-.. image:: https://img.shields.io/badge/version-0.3.3-yellow.svg?style=flat-square
+.. image:: https://img.shields.io/badge/version-0.3.4-yellow.svg?style=flat-square
     :target: setup.py
-    :alt: Version 0.3.3
+    :alt: Version 0.3.4
 
 Plugin to check if there are ipdb/pdb breakpoints left into our code
 
