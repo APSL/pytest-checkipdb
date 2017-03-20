@@ -8,9 +8,9 @@ pytest-checkipdb
     :target: https://travis-ci.org/APSL/pytest-checkipdb
     :alt: See Build Status on Travis CI
 
-.. image:: https://img.shields.io/badge/version-0.3.4-yellow.svg?style=flat-square
+.. image:: https://img.shields.io/badge/version-0.3.5-yellow.svg?style=flat-square
     :target: setup.py
-    :alt: Version 0.3.4
+    :alt: Version 0.3.5
 
 Plugin to check if there are ipdb/pdb breakpoints left into our code
 
