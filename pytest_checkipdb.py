@@ -36,6 +36,9 @@ class CheckIpdbItem(pytest.Item, pytest.File):
             return '{} in file {}'.format(excinfo.value.args[0], self.fspath)
         return super(CheckIpdbItem, self).repr_failure(excinfo)
 
+    def reportinfo(self):
+        return self.fspath, -1, "cipdb-check"
+
 
 class CheckIpdbError(Exception):
     """ indicates an error during cipdb checks. """
