@@ -12,7 +12,7 @@ pytest-checkipdb
     :target: setup.py
     :alt: Version 0.3.5
     
-... image:: [![Downloads](https://pepy.tech/badge/pytest-checkipdb)](https://pepy.tech/project/pytest-checkipdb)
+[![Downloads](https://pepy.tech/badge/pytest-checkipdb)](https://pepy.tech/project/pytest-checkipdb)
 
 Plugin to check if there are ipdb/pdb breakpoints left into our code
 
