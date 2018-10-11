@@ -11,5 +11,6 @@ py==1.4.32
 pytest==3.0.6
 simplegeneric==0.8.1
 six==1.10.0
+tox==3.5.2
 traitlets==4.3.2
 wcwidth==0.1.7
