@@ -49,10 +49,6 @@ class Visitor(ast.NodeVisitor):
     check_functions = ['ipdb', 'pdb', 'set_trace', 'breakpoint']
 
     def visit_Call(self, node):
-        self.check_above_or_equal_3_7(node)
-        ast.NodeVisitor.generic_visit(self, node)
-
-    def check_above_or_equal_3_7(self, node):
         try:
             object_to_evaluate = node.func
             try:
@@ -66,3 +62,4 @@ class Visitor(ast.NodeVisitor):
                     raise CheckIpdbError('Detected {} call at line {} col {}'.format(item, line_number, col_number))
         except AttributeError:
             pass
+        ast.NodeVisitor.generic_visit(self, node)
