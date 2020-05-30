@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+1.0.1 (2020-05-30)
+------------------
+
+* Added github action in order to run tests
+* Changed the README.rst to README.md
+* Updated the package classifiers
+
 1.0.0 (2020-05-30)
 ------------------
 
