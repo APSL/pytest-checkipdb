@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-checkipdb',
-    version='1.0.1',
+    version='1.0.2',
     author='Andreu Vallbona',
     author_email='avallbona@gmail.com',
     maintainer='Andreu Vallbona',
@@ -22,6 +22,7 @@ setup(
     url='https://github.com/avallbona/pytest-checkipdb',
     description='plugin to check if there are ipdb debugs left',
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     py_modules=[
         'pytest_checkipdb'
     ],

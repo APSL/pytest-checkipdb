@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+1.0.2 (2020-05-30)
+------------------
+
+* Fixed `long_description_content_type` for proper markdown render
+
+
 1.0.1 (2020-05-30)
 ------------------
 
