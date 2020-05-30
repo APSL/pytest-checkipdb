@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-checkipdb',
-    version='0.3.6',
+    version='1.0.0',
     author='Andreu Vallbona',
     author_email='avallbona@gmail.com',
     maintainer='Andreu Vallbona',

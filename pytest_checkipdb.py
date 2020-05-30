@@ -46,12 +46,19 @@ class CheckIpdbError(Exception):
 
 class Visitor(ast.NodeVisitor):
 
+    check_functions = ['ipdb', 'pdb', 'set_trace', 'breakpoint']
+
     def visit_Call(self, node):
         try:
-            for item in ['ipdb', 'pdb']:
-                if node.func.value.id == item:
-                    line_number = node.func.value.lineno
-                    col_number = node.func.value.col_offset
+            object_to_evaluate = node.func
+            try:
+                attribute_to_evaluate = node.func.id
+            except AttributeError:
+                attribute_to_evaluate = node.func.attr
+            for item in self.check_functions:
+                if attribute_to_evaluate == item:
+                    line_number = object_to_evaluate.lineno
+                    col_number = object_to_evaluate.col_offset
                     raise CheckIpdbError('Detected {} call at line {} col {}'.format(item, line_number, col_number))
         except AttributeError:
             pass

@@ -8,9 +8,9 @@ pytest-checkipdb
     :target: https://travis-ci.org/APSL/pytest-checkipdb
     :alt: See Build Status on Travis CI
 
-.. image:: https://img.shields.io/badge/version-0.3.6-yellow.svg?style=flat-square
+.. image:: https://img.shields.io/badge/version-1.0.0-yellow.svg?style=flat-square
     :target: setup.py
-    :alt: Version 0.3.6
+    :alt: Version 1.0.0
 
 .. image:: https://pepy.tech/badge/pytest-checkipdb
     :alt: Downloads

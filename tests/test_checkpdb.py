@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from _pytest.config import ExitCode
 
 
 class TestWithPdb(object):
@@ -24,7 +25,7 @@ class TestWithPdb(object):
                 pass
         """)
         result = testdir.runpytest("--cipdb", "-v")
-        assert result.ret == 1
+        assert result.ret == ExitCode.TESTS_FAILED
         result.stdout.fnmatch_lines('* FAILED*')
 
     def test_with_pdb_commented_single_line(self, testdir):
