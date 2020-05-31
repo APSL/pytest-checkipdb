@@ -1,6 +1,6 @@
 # Change Log
 
-## 1.0.3 (2020-05-30)
+## 1.0.3 (2020-05-31)
 
 * Restructured README.md
 * Added github status badge
