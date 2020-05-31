@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.0.5 (2020-05-31)
+
+* Added link to github status badge
+
+
+## 1.0.4 (2020-05-31)
+
+* Addressed problem with project description page on pypi.org
+
+
 ## 1.0.3 (2020-05-31)
 
 * Restructured README.md
